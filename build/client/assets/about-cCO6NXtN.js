@@ -1,1 +1,0 @@
-import{w as s,p as t}from"./chunk-OIYGIGL5-CiX3q9ew.js";const a=s(function(){return t.jsxs("div",{className:"p-8",children:[t.jsx("h1",{className:"text-3xl font-bold mb-4",children:"About"}),t.jsx("p",{children:"This is the about page."})]})});export{a as default};

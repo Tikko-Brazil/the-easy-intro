@@ -1,0 +1,1 @@
+import{w as r,v as t,p as s}from"./chunk-OIYGIGL5-CiX3q9ew.js";const a=r(function(){const{userId:e}=t();return s.jsxs("div",{className:"p-8",children:[s.jsx("h1",{className:"text-3xl font-bold mb-4",children:"User Profile"}),s.jsxs("p",{children:["User ID: ",e]})]})});export{a as default};

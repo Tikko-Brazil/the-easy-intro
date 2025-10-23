@@ -1,5 +1,5 @@
-node_modules
-dist
-tsconfig.app.tsbuildinfo
-tsconfig.node.tsbuildinfo
+.react-router
 .vercel
+node_modules
+build
+dist

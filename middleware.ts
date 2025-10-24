@@ -48,54 +48,62 @@ function escapeHtml(unsafe: string): string {
 }
 
 export default async function middleware(request: Request) {
-  // const userAgent = request.headers.get("user-agent") || "";
-  // const isBot =
-  //   userAgent.includes("WhatsApp") || userAgent.includes("facebookexternalhit");
-  // if (!isBot) {
-  //   return; // Pass request to the next handler (application)
-  // }
-  // const url = new URL(request.url);
-  // const pathname = url.pathname;
-  // // Only handle /event/:eventId routes
-  // const match = pathname.match(/^\/event\/(\d+)$/);
-  // if (!match) {
-  //   return; // Pass request to the next handler
-  // }
-  // const eventId = Number(match[1]);
-  // if (isNaN(eventId)) {
-  //   return; // Pass request to the next handler
-  // }
-  // const event = await getEvent(eventId);
-  // if (!event) {
-  //   return; // Pass request to the next handler
-  // }
-  // const ogImage = event.image;
-  // const html = `
-  //   <!DOCTYPE html>
-  //   <html>
-  //     <head>
-  //       <title>${escapeHtml(event.name)}</title>
-  //       <meta name="description" content="${escapeHtml(event.description)}" />
-  //       <meta property="og:title" content="${escapeHtml(event.name)}" />
-  //       <meta property="og:description" content="${escapeHtml(event.description)}" />
-  //       <meta property="og:image" content="${escapeHtml(ogImage)}" />
-  //       <meta property="og:url" content="${request.url}" />
-  //       <meta property="og:type" content="event" />
-  //     </head>
-  //     <body></body>
-  //   </html>
-  // `;
-  // return new Response(html, {
-  //   status: 200,
-  //   headers: { "Content-Type": "text/html" },
-  // });
-  return next({
-    request: {
-      headers: new Headers(request.headers),
-    },
-    headers: {
-      "x-hello-from-middleware2": "hello",
-    },
+  const userAgent = request.headers.get("user-agent") || "";
+  const isBot =
+    userAgent.includes("WhatsApp") || userAgent.includes("facebookexternalhit");
+  if (!isBot) {
+    return next({
+      request: {
+        headers: new Headers(request.headers),
+      },
+    });
+  }
+  const url = new URL(request.url);
+  const pathname = url.pathname;
+  // Only handle /event/:eventId routes
+  const match = pathname.match(/^\/event\/(\d+)$/);
+  if (!match) {
+    return next({
+      request: {
+        headers: new Headers(request.headers),
+      },
+    });
+  }
+  const eventId = Number(match[1]);
+  if (isNaN(eventId)) {
+    return next({
+      request: {
+        headers: new Headers(request.headers),
+      },
+    });
+  }
+  const event = await getEvent(eventId);
+  if (!event) {
+    return next({
+      request: {
+        headers: new Headers(request.headers),
+      },
+    });
+  }
+  const ogImage = event.image;
+  const html = `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>${escapeHtml(event.name)}</title>
+        <meta name="description" content="${escapeHtml(event.description)}" />
+        <meta property="og:title" content="${escapeHtml(event.name)}" />
+        <meta property="og:description" content="${escapeHtml(event.description)}" />
+        <meta property="og:image" content="${escapeHtml(ogImage)}" />
+        <meta property="og:url" content="${request.url}" />
+        <meta property="og:type" content="event" />
+      </head>
+      <body></body>
+    </html>
+  `;
+  return new Response(html, {
+    status: 200,
+    headers: { "Content-Type": "text/html" },
   });
 }
 

@@ -41,7 +41,7 @@ export default async function middleware(request: Request) {
     userAgent.includes("WhatsApp") || userAgent.includes("facebookexternalhit");
 
   if (!isBot) {
-    return new Response(null, { status: 200 }); // Continue without modification
+    return; // Allow request to proceed to the application
   }
 
   const url = new URL(request.url);
@@ -50,17 +50,17 @@ export default async function middleware(request: Request) {
   // Only handle /event/:eventId routes
   const match = pathname.match(/^\/event\/(\d+)$/);
   if (!match) {
-    return new Response(null, { status: 200 }); // Continue without modification
+    return; // Allow request to proceed to the application
   }
 
   const eventId = Number(match[1]);
   if (isNaN(eventId)) {
-    return new Response(null, { status: 200 }); // Continue without modification
+    return; // Allow request to proceed to the application
   }
 
   const event = await getEvent(eventId);
   if (!event) {
-    return new Response(null, { status: 200 }); // Continue without modification
+    return; // Allow request to proceed to the application
   }
 
   const html = `

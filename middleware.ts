@@ -1,3 +1,5 @@
+import { next } from "@vercel/functions";
+
 const BACKEND_BASE_URL = "https://api.tikko-backend.com.br";
 
 interface Event {
@@ -87,7 +89,14 @@ export default async function middleware(request: Request) {
   //   status: 200,
   //   headers: { "Content-Type": "text/html" },
   // });
-  return new Response("Other pages work normally");
+  return next({
+    request: {
+      headers: new Headers(request.headers),
+    },
+    headers: {
+      "x-hello-from-middleware2": "hello",
+    },
+  });
 }
 
 export const config = {

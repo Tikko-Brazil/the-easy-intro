@@ -1,0 +1,749 @@
+{
+  "dashboard": {
+    "tabs": {
+      "feed": "Feed",
+      "explore": "Explorar",
+      "myEvents": "Meus Eventos",
+      "myTickets": "Meus Ingressos",
+      "profile": "Perfil"
+    },
+    "myEvents": {
+      "title": "Meus Eventos",
+      "createEvent": "Criar Evento",
+      "tags": {
+        "upcoming": "Próximo",
+        "past": "Passado",
+        "draft": "Rascunho",
+        "published": "Publicado"
+      },
+      "buttons": {
+        "viewDetails": "Ver Detalhes",
+        "edit": "Editar",
+        "manage": "Gerenciar"
+      }
+    },
+    "trending": {
+      "title": "Eventos em Alta",
+      "viewAll": "Ver Todos"
+    },
+    "suggestions": {
+      "title": "Sugestões para Você"
+    },
+    "search": {
+      "placeholder": "Buscar eventos..."
+    }
+  },
+  "eventManagement": {
+    "header": {
+      "backToDashboard": "Voltar ao Dashboard",
+      "eventManagement": "Gerenciamento do Evento",
+      "description": "Gerencie as configurações do seu evento, visualize análises e interaja com os participantes."
+    },
+    "tabs": {
+      "overview": "Visão Geral",
+      "tickets": "Tipos de Ingresso",
+      "coupons": "Cupons",
+      "staff": "Equipe",
+      "sendTickets": "Enviar Ingressos",
+      "validate": "Validar Ingressos",
+      "requests": "Solicitações",
+      "analytics": "Análises",
+      "settings": "Configurações",
+      "participants": "Participantes",
+      "edit": "Editar Evento"
+    },
+    "buttons": {
+      "viewParticipantList": "Ver Lista de Participantes"
+    },
+    "tags": {
+      "upcoming": "Próximo",
+      "past": "Passado",
+      "active": "Ativo",
+      "inactive": "Inativo",
+      "draft": "Rascunho",
+      "published": "Publicado"
+    },
+    "overview": {
+      "cards": {
+        "totalTickets": "Total de Ingressos",
+        "soldTickets": "Ingressos Vendidos",
+        "revenue": "Receita",
+        "attendees": "Participantes",
+        "conversionRate": "Taxa de Conversão",
+        "averageAge": "Idade Média"
+      },
+      "stats": {
+        "conversionRate": "taxa de conversão",
+        "liquidRevenue": "receita líquida",
+        "yearsOld": "anos"
+      },
+      "recentActivity": {
+        "title": "Atividade Recente",
+        "actions": {
+          "was accepted": "Aceito",
+          "requested to join": "Solicitou Participar"
+        },
+        "time": {
+          "justNow": "agora mesmo",
+          "minutesAgo": "{{count}} minuto atrás",
+          "minutesAgo_plural": "{{count}} minutos atrás",
+          "hoursAgo": "{{count}} hora atrás",
+          "hoursAgo_plural": "{{count}} horas atrás", 
+          "daysAgo": "{{count}} dia atrás",
+          "daysAgo_plural": "{{count}} dias atrás"
+        },
+        "ticketPurchased": "Ingresso comprado",
+        "newRegistration": "Nova inscrição",
+        "paymentReceived": "Pagamento recebido",
+        "ticketValidated": "Ingresso validado",
+        "ago": "atrás",
+        "minutes": "minutos",
+        "hours": "horas",
+        "days": "dias"
+      },
+      "recentActivity": {
+        "title": "Atividade Recente",
+        "ticketPurchased": "Ingresso comprado",
+        "newRegistration": "Nova inscrição",
+        "paymentReceived": "Pagamento recebido",
+        "ticketValidated": "Ingresso validado",
+        "ago": "atrás",
+        "minutes": "minutos",
+        "hours": "horas",
+        "days": "dias"
+      },
+      "stats": {
+        "spotsRemaining": "vagas restantes",
+        "fromLastWeek": "da semana passada",
+        "available": "disponíveis",
+        "increase": "aumento"
+      },
+      "quickActions": {
+        "title": "Ações Rápidas",
+        "sendInvitations": "Enviar Convites",
+        "downloadReport": "Baixar Relatório",
+        "editEvent": "Editar Detalhes do Evento",
+        "viewAnalytics": "Ver Análises",
+        "viewParticipantList": "Ver Lista de Participantes",
+        "createDiscountCode": "Criar Código de Desconto",
+        "validateTickets": "Validar Ingressos"
+      }
+    },
+    "editEvent": {
+      "title": "Editar Evento",
+      "subtitle": "Edite as informações básicas do seu evento",
+      "sections": {
+        "eventInfo": "Informações do Evento",
+        "settings": "Configurações"
+      },
+      "fields": {
+        "eventName": "Nome do Evento",
+        "eventNamePlaceholder": "Digite o nome do evento",
+        "description": "Descrição",
+        "descriptionPlaceholder": "Digite a descrição do evento",
+        "startDate": "Data de Início",
+        "startTime": "Horário de Início",
+        "startTimePlaceholder": "Digite o horário de início",
+        "endDate": "Data de Término",
+        "endTime": "Horário de Término",
+        "endTimePlaceholder": "Digite o horário de término",
+        "location": "Local",
+        "locationPlaceholder": "Digite o local do evento",
+        "address": "Endereço",
+        "addressPlaceholder": "Digite o endereço completo",
+        "addressComplement": "Complemento do endereço",
+        "addressComplementPlaceholder": "Apartamento, suíte, etc. (opcional)",
+        "eventImage": "Imagem do evento",
+        "autoAccept": "Aceitar participantes automaticamente",
+        "autoAcceptDescription": "Solicitações de participação serão aceitas automaticamente",
+        "privateEvent": "Evento privado",
+        "activeEvent": "Evento ativo"
+      },
+      "buttons": {
+        "saveChanges": "Salvar Alterações",
+        "cancel": "Cancelar",
+        "selectImage": "Selecionar imagem"
+      },
+      "validation": {
+        "nameRequired": "Nome do evento é obrigatório",
+        "nameMinLength": "Nome deve ter pelo menos 3 caracteres",
+        "nameMaxLength": "Nome deve ter no máximo 100 caracteres",
+        "descriptionRequired": "Descrição é obrigatória",
+        "descriptionMinLength": "Descrição deve ter pelo menos 10 caracteres",
+        "descriptionMaxLength": "Descrição deve ter no máximo 1500 caracteres",
+        "startDateRequired": "Data de início é obrigatória",
+        "startTimeRequired": "Horário de início é obrigatório",
+        "startTimeFormat": "Formato de horário inválido (HH:MM)",
+        "endDateRequired": "Data de término é obrigatória",
+        "endTimeRequired": "Horário de término é obrigatório",
+        "endTimeFormat": "Formato de horário inválido (HH:MM)",
+        "locationRequired": "Local é obrigatório",
+        "coordinatesRequired": "Coordenadas do local são obrigatórias"
+      },
+      "messages": {
+        "eventUpdated": "Evento atualizado com sucesso!",
+        "updateError": "Erro ao atualizar evento"
+      }
+    },
+    "analytics": {
+      "title": "Análises",
+      "cards": {
+        "totalRevenue": {
+          "title": "Receita Total",
+          "subtitle": "Receita gerada"
+        },
+        "ticketsSold": {
+          "title": "Ingressos Vendidos",
+          "subtitle": "Total de ingressos vendidos"
+        },
+        "conversionRate": {
+          "title": "Taxa de Conversão",
+          "subtitle": "Visitantes para compradores"
+        },
+        "dailySales": {
+          "title": "Vendas Diárias",
+          "subtitle": "Vendas ao longo do tempo"
+        },
+        "validatedTickets": {
+          "title": "Ingressos Validados",
+          "subtitle": "Validação em tempo real"
+        },
+        "ticketsByType": {
+          "title": "Ingressos por Tipo",
+          "subtitle": "Distribuição por categoria"
+        },
+        "genderDistribution": {
+          "title": "Distribuição por Gênero",
+          "subtitle": "Demografia dos participantes"
+        },
+        "ageStatistics": {
+          "title": "Estatísticas de Idade",
+          "subtitle": "Demografia de idade"
+        },
+        "joinRequests": {
+          "title": "Solicitações de Participação",
+          "subtitle": "Pedidos de participação"
+        },
+        "ageDistribution": {
+          "title": "Distribuição por Idade",
+          "subtitle": "Divisão por idade"
+        },
+        "ticketDistribution": {
+          "title": "Distribuição de Ingressos",
+          "subtitle": "Alocação de ingressos"
+        },
+        "quickActions": {
+          "title": "Ações Rápidas",
+          "subtitle": "Ferramentas de gerenciamento"
+        }
+      },
+      "timeWindows": {
+        "7d": "7d",
+        "14d": "14d",
+        "30d": "30d",
+        "30m": "30min",
+        "2h": "2h",
+        "5h": "5h",
+        "24h": "24h"
+      },
+      "pagination": {
+        "previous": "Anterior",
+        "next": "Próximo",
+        "page": "Página",
+        "of": "de"
+      },
+      "noData": "Nenhum dado disponível",
+      "loading": "Carregando...",
+      "error": "Erro ao carregar dados",
+      "labels": {
+        "ofTotal": "do total",
+        "pageVisits": "visitas à página",
+        "male": "Masculino",
+        "female": "Feminino",
+        "averageAge": "Idade média",
+        "avgMaleAge": "Idade Média Masculina",
+        "avgFemaleAge": "Idade Média Feminina",
+        "pending": "Pendente",
+        "approved": "Aprovado",
+        "rejected": "Rejeitado",
+        "type": "Tipo",
+        "lot": "Lote",
+        "amount": "Quantidade",
+        "revenue": "Receita",
+        "paidTickets": "Ingressos pagos",
+        "freeTickets": "Ingressos gratuitos"
+      },
+      "actions": {
+        "exportReport": "Exportar Relatório de Análises",
+        "viewDetailedCharts": "Ver Gráficos Detalhados"
+      }
+    },
+    "participants": {
+      "title": "Participantes",
+      "search": {
+        "placeholder": "Buscar participantes...",
+        "filters": {
+          "all": "Todos",
+          "approved": "Aprovados",
+          "rejected": "Rejeitados",
+          "pending": "Pendentes"
+        }
+      },
+      "status": {
+        "approved": "Aprovado",
+        "rejected": "Rejeitado",
+        "pending": "Pendente"
+      },
+      "labels": {
+        "ticketType": "Tipo de Ingresso",
+        "paidValue": "Valor Pago",
+        "coupon": "Cupom",
+        "validated": "Validado",
+        "yes": "Sim",
+        "no": "Não"
+      },
+      "actions": {
+        "refundTicket": "Reembolsar Ingresso"
+      },
+      "refundDialog": {
+        "title": "Reembolsar Ingresso",
+        "description": "Tem certeza de que deseja reembolsar este ingresso? Esta ação não pode ser desfeita.",
+        "cancel": "Cancelar",
+        "confirm": "Reembolsar"
+      },
+      "pagination": {
+        "showing": "Mostrando",
+        "to": "a",
+        "of": "de",
+        "participants": "participantes",
+        "previous": "Anterior",
+        "next": "Próximo"
+      }
+    },
+    "ticketTypes": {
+      "title": "Tipos de Ingresso",
+      "search": {
+        "placeholder": "Buscar tipos de ingresso...",
+        "filters": {
+          "all": "Todos",
+          "active": "Ativos",
+          "inactive": "Inativos"
+        }
+      },
+      "status": {
+        "active": "Ativo",
+        "inactive": "Inativo"
+      },
+      "labels": {
+        "price": "Preço",
+        "lot": "Lote",
+        "totalSold": "Total Vendido"
+      },
+      "actions": {
+        "createTicketType": "Criar Tipo de Ingresso",
+        "edit": "Editar"
+      },
+      "createDialog": {
+        "title": "Criar Novo Tipo de Ingresso",
+        "description": "Adicione um novo tipo de ingresso para seu evento",
+        "fields": {
+          "ticketType": "Tipo de Ingresso",
+          "ticketTypePlaceholder": "Digite o nome do tipo de ingresso",
+          "price": "Preço",
+          "pricePlaceholder": "Digite o preço",
+          "lot": "Lote",
+          "lotPlaceholder": "Digite o número do lote",
+          "totalTickets": "Total de Ingressos",
+          "totalTicketsPlaceholder": "Digite o total de ingressos",
+          "isActive": "Ativo",
+          "gender": "Gênero",
+          "male": "Masculino",
+          "female": "Feminino"
+        },
+        "buttons": {
+          "cancel": "Cancelar",
+          "create": "Criar"
+        }
+      },
+      "editDialog": {
+        "title": "Editar Tipo de Ingresso",
+        "description": "Atualizar informações do tipo de ingresso",
+        "buttons": {
+          "cancel": "Cancelar",
+          "save": "Salvar Alterações"
+        }
+      }
+    },
+    "coupons": {
+      "title": "Cupons",
+      "search": {
+        "placeholder": "Buscar cupons...",
+        "filters": {
+          "all": "Todos",
+          "active": "Ativos",
+          "inactive": "Inativos"
+        }
+      },
+      "status": {
+        "active": "Ativo",
+        "inactive": "Inativo"
+      },
+      "types": {
+        "percentage": "Porcentagem",
+        "fixed": "Valor Fixo"
+      },
+      "table": {
+        "code": "Código",
+        "type": "Tipo",
+        "value": "Valor",
+        "maxUsage": "Uso Máximo",
+        "currentUsage": "Uso Atual",
+        "status": "Status",
+        "actions": "Ações"
+      },
+      "actions": {
+        "createCoupon": "Criar Cupom",
+        "edit": "Editar",
+        "delete": "Excluir"
+      },
+      "createDialog": {
+        "title": "Criar Novo Cupom",
+        "description": "Adicione um novo cupom para seu evento",
+        "fields": {
+          "code": "Código do Cupom",
+          "codePlaceholder": "Digite o código do cupom",
+          "type": "Tipo de Desconto",
+          "value": "Valor do Desconto",
+          "valuePlaceholder": "Digite o valor do desconto",
+          "maxUsage": "Uso Máximo",
+          "maxUsagePlaceholder": "Digite o uso máximo",
+          "ticketSpecific": "Específico por Tipo de Ingresso",
+          "selectTicketTypes": "Selecionar Tipos de Ingresso"
+        },
+        "buttons": {
+          "cancel": "Cancelar",
+          "create": "Criar"
+        }
+      },
+      "editDialog": {
+        "title": "Editar Cupom",
+        "description": "Atualizar informações do cupom",
+        "buttons": {
+          "cancel": "Cancelar",
+          "save": "Salvar Alterações"
+        }
+      },
+      "noCouponsFound": "Nenhum cupom encontrado"
+    },
+    "staff": {
+      "title": "Equipe do Evento",
+      "search": {
+        "placeholder": "Buscar equipe...",
+        "filters": {
+          "all": "Todos",
+          "host": "Anfitrião",
+          "manager": "Gerente",
+          "coordinator": "Coordenador",
+          "validator": "Validador"
+        }
+      },
+      "roles": {
+        "host": "Anfitrião",
+        "manager": "Gerente",
+        "coordinator": "Coordenador", 
+        "validator": "Validador"
+      },
+      "actions": {
+        "addStaff": "Adicionar Equipe",
+        "edit": "Editar",
+        "remove": "Remover"
+      },
+      "addDialog": {
+        "title": "Adicionar Membro da Equipe",
+        "description": "Adicione um novo membro à equipe do seu evento",
+        "fields": {
+          "email": "Email",
+          "emailPlaceholder": "Digite o email do membro da equipe",
+          "role": "Função"
+        },
+        "buttons": {
+          "cancel": "Cancelar",
+          "add": "Adicionar Equipe"
+        }
+      },
+      "editDialog": {
+        "title": "Editar Membro da Equipe",
+        "description": "Atualizar função do membro da equipe",
+        "buttons": {
+          "cancel": "Cancelar",
+          "save": "Salvar Alterações"
+        }
+      },
+      "removeDialog": {
+        "title": "Remover Membro da Equipe",
+        "description": "Tem certeza de que deseja remover este membro da equipe? Esta ação não pode ser desfeita.",
+        "buttons": {
+          "cancel": "Cancelar",
+          "remove": "Remover"
+        }
+      },
+      "noStaffFound": "Nenhum membro da equipe encontrado"
+    },
+    "sendTickets": {
+      "title": "Enviar Ingresso Cortesia",
+      "fields": {
+        "fullName": "Nome Completo",
+        "fullNamePlaceholder": "Digite o nome completo",
+        "email": "Email",
+        "emailPlaceholder": "Digite o endereço de email",
+        "phone": "Telefone",
+        "phonePlaceholder": "+55 (11) 99999-9999",
+        "ticketType": "Tipo de Ingresso",
+        "ticketTypePlaceholder": "Selecione o tipo de ingresso"
+      },
+      "buttons": {
+        "send": "Enviar Ingresso"
+      }
+    },
+    "joinRequests": {
+      "title": "Solicitações de Participação",
+      "subtitle": "Gerencie solicitações pendentes para seu evento",
+      "search": {
+        "placeholder": "Buscar solicitações..."
+      },
+      "status": {
+        "pending": "Pendente"
+      },
+      "fields": {
+        "ticketType": "Tipo de Ingresso",
+        "paidValue": "Valor Pago",
+        "coupon": "Cupom"
+      },
+      "actions": {
+        "accept": "Aceitar",
+        "reject": "Rejeitar"
+      },
+      "acceptDialog": {
+        "title": "Aceitar Solicitação",
+        "description": "Tem certeza de que deseja aceitar esta solicitação?",
+        "buttons": {
+          "cancel": "Cancelar",
+          "accept": "Aceitar"
+        }
+      },
+      "rejectDialog": {
+        "title": "Rejeitar Solicitação",
+        "description": "Tem certeza de que deseja rejeitar esta solicitação?",
+        "buttons": {
+          "cancel": "Cancelar",
+          "reject": "Rejeitar"
+        }
+      },
+      "noRequestsFound": "Nenhuma solicitação encontrada"
+    }
+  },
+  "validation": {
+    "required": "Este campo é obrigatório",
+    "email": {
+      "invalid": "E-mail inválido",
+      "noMatch": "E-mails não conferem"
+    },
+    "name": {
+      "invalid": "Por favor, insira um nome válido",
+      "twoWords": "Digite seu nome e sobrenome"
+    },
+    "phone": {
+      "required": "Telefone é obrigatório",
+      "countryCodeRequired": "Código do país é obrigatório (ex: +55)",
+      "invalidBrazilian": "Número de telefone brasileiro inválido",
+      "invalidLength": "Número de telefone deve ter entre 8 e 15 dígitos",
+      "noMatch": "Telefones não conferem"
+    },
+    "password": {
+      "minLength": "A senha deve ter pelo menos 8 caracteres",
+      "uppercase": "A senha deve conter pelo menos uma letra maiúscula",
+      "lowercase": "A senha deve conter pelo menos uma letra minúscula",
+      "number": "A senha deve conter pelo menos um número",
+      "specialChar": "A senha deve conter pelo menos um caractere especial (Ex: !@#$%^&*()_+)",
+      "noMatch": "As senhas não conferem"
+    },
+    "birthdate": {
+      "required": "Data de nascimento é obrigatória",
+      "minAge": "Você deve ter pelo menos 18 anos"
+    },
+    "document": {
+      "invalidCPF": "CPF inválido",
+      "invalid": "Documento inválido"
+    },
+    "instagram": {
+      "noAt": "Não é necessário incluir o '@'",
+      "invalid": "Conta inválida: deve possuir entre 3 e 30 caracteres, e só deve possuir letras, números, '.' ou '_'"
+    },
+    "bio": {
+      "maxLength": "Bio deve ter menos de 500 caracteres"
+    },
+    "ticketType": {
+      "required": "Tipo de ingresso é obrigatório",
+      "invalid": "Por favor, selecione um tipo de ingresso válido"
+    }
+  },
+  "myTickets": {
+    "title": "Meus Ingressos",
+    "status": {
+      "active": "Ativo",
+      "used": "Usado",
+      "expired": "Expirado"
+    },
+    "actions": {
+      "viewDetails": "Ver Detalhes",
+      "showQR": "Mostrar QR",
+      "downloadPDF": "Baixar PDF"
+    },
+    "backToDashboard": "Voltar ao Dashboard",
+    "backToTickets": "Voltar aos Ingressos",
+    "backToDetails": "Voltar aos Detalhes",
+    "ticketDetails": "Detalhes do Ingresso",
+    "qrCode": "Código QR",
+    "scanQR": "Escaneie este QR code no check-in",
+    "qrInstructions": "Apresente este código QR à equipe do evento para entrada",
+    "qrWarning": "Não compartilhe este código QR com ninguém. É o identificador único do seu ingresso.",
+    "orderNumber": "Número do Pedido",
+    "eventInformation": "Informações do Evento",
+    "ticketInformation": "Informações do Ingresso",
+    "holderInformation": "Informações do Portador",
+    "userInformation": "Informações do Usuário",
+    "date": "Data",
+    "time": "Horário",
+    "location": "Local",
+    "ticketType": "Tipo de Ingresso",
+    "price": "Preço",
+    "purchaseDate": "Data de Compra",
+    "ticketCode": "Código do Ingresso",
+    "holderName": "Nome do Portador",
+    "name": "Nome",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "downloadPDF": "Baixar PDF",
+    "downloadSuccess": "Ingresso baixado com sucesso!",
+    "downloadDialog": {
+      "title": "Baixar Ingresso em PDF",
+      "description": "Tem certeza que deseja baixar este ingresso em PDF? Você pode imprimi-lo ou salvá-lo para acesso offline.",
+      "confirm": "Baixar",
+      "cancel": "Cancelar"
+    }
+  },
+  "auth": {
+    "errors": {
+      "exchange": {
+        "400": "Código de autorização ou verificador ausente",
+        "401": "Falha na autenticação do Google",
+        "500": "Erro do servidor durante a autenticação"
+      },
+      "refresh": {
+        "400": "Token de atualização ausente",
+        "401": "Token de atualização inválido ou expirado"
+      },
+      "signup": {
+        "400": "Solicitação inválida ou campos obrigatórios ausentes",
+        "403": "Conflito no método de autenticação (usuário já possui conta com outro tipo de login)",
+        "409": "Usuário já existe com este email",
+        "422": "Senha muito fraca",
+        "500": "Erro do servidor durante o registro"
+      },
+      "verify": {
+        "400": "Solicitação inválida ou campos obrigatórios ausentes",
+        "401": "Código de verificação inválido",
+        "404": "Nenhum registro de verificação encontrado",
+        "410": "Código de verificação expirado ou já usado",
+        "429": "Muitas tentativas de verificação"
+      },
+      "regenerateCode": {
+        "400": "Endereço de email ausente",
+        "404": "Usuário não encontrado",
+        "409": "Email já verificado",
+        "429": "Muitas tentativas de regeneração ou aguarde"
+      },
+      "login": {
+        "400": "Solicitação inválida ou campos obrigatórios ausentes",
+        "401": "Credenciais inválidas ou email não verificado",
+        "403": "Erro no método de autenticação"
+      },
+      "forgotPassword": {
+        "400": "Endereço de email ausente",
+        "409": "Não é possível redefinir senha para usuários OAuth",
+        "429": "Muitas tentativas de redefinição ou aguarde",
+        "500": "Erro do servidor durante a redefinição de senha"
+      },
+      "resetPassword": {
+        "400": "Solicitação inválida ou campos obrigatórios ausentes",
+        "404": "Token de redefinição inválido ou usuário não encontrado",
+        "410": "Token de redefinição expirado ou já usado",
+        "422": "Senha muito fraca",
+        "500": "Erro do servidor durante a redefinição de senha"
+      },
+      "unknown": "Erro desconhecido"
+    }
+  },
+  "signup": {
+    "title": "Criar Conta",
+    "subtitle": "Preencha seus dados para começar",
+    "fields": {
+      "fullName": {
+        "label": "Nome Completo *",
+        "placeholder": "Seu nome completo"
+      },
+      "email": {
+        "label": "Email *",
+        "placeholder": "seu@email.com"
+      },
+      "confirmEmail": {
+        "label": "Confirmar Email *",
+        "placeholder": "Confirme seu email"
+      },
+      "password": {
+        "label": "Senha *",
+        "placeholder": "Sua senha"
+      },
+      "confirmPassword": {
+        "label": "Confirmar Senha *",
+        "placeholder": "Confirme sua senha"
+      },
+      "gender": {
+        "label": "Gênero *",
+        "male": "Masculino",
+        "female": "Feminino",
+        "other": "Outro"
+      },
+      "birthdate": {
+        "label": "Data de Nascimento *",
+        "placeholder": "dd/mm/aaaa"
+      },
+      "phone": {
+        "label": "Telefone *",
+        "placeholder": "+55 (11) 99999-9999"
+      },
+      "confirmPhone": {
+        "label": "Confirmar Telefone *",
+        "placeholder": "Confirme seu telefone"
+      },
+      "instagram": {
+        "label": "Instagram *",
+        "placeholder": "seu_usuario"
+      },
+      "bio": {
+        "label": "Bio (opcional)",
+        "placeholder": "Conte-nos sobre você..."
+      }
+    },
+    "buttons": {
+      "submit": "Criar Conta",
+      "submitting": "Criando...",
+      "showPassword": "Mostrar senha",
+      "hidePassword": "Ocultar senha"
+    },
+    "links": {
+      "hasAccount": "Já tem uma conta?",
+      "signIn": "Entrar"
+    }
+  }
+}

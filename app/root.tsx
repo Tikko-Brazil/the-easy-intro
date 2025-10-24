@@ -9,6 +9,12 @@ import {
 
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { initMercadoPago } from "@mercadopago/sdk-react";
+import "./i18n";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -42,8 +48,23 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+// Initialize MercadoPago
+initMercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, {
+  locale: "pt-BR",
+});
+
+const queryClient = new QueryClient();
+
 export default function App() {
-  return <Outlet />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <Outlet />;
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
 }
 
 export function HydrateFallback() {

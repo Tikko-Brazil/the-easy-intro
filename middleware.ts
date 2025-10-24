@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 const BACKEND_BASE_URL = "https://api.tikko-backend.com.br";
 
 interface Event {
@@ -35,13 +37,23 @@ async function getEvent(id: number): Promise<Event | null> {
   }
 }
 
+// Simple HTML escape function to prevent XSS
+function escapeHtml(unsafe: string): string {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 export default async function middleware(request: Request) {
   const userAgent = request.headers.get("user-agent") || "";
   const isBot =
     userAgent.includes("WhatsApp") || userAgent.includes("facebookexternalhit");
 
   if (!isBot) {
-    return; // Allow request to proceed to the application
+    return NextResponse.next(); // Pass request to the next handler (application)
   }
 
   const url = new URL(request.url);
@@ -50,28 +62,29 @@ export default async function middleware(request: Request) {
   // Only handle /event/:eventId routes
   const match = pathname.match(/^\/event\/(\d+)$/);
   if (!match) {
-    return; // Allow request to proceed to the application
+    return NextResponse.next(); // Pass request to the next handler
   }
 
   const eventId = Number(match[1]);
   if (isNaN(eventId)) {
-    return; // Allow request to proceed to the application
+    return NextResponse.next(); // Pass request to the next handler
   }
 
   const event = await getEvent(eventId);
   if (!event) {
-    return; // Allow request to proceed to the application
+    return NextResponse.next(); // Pass request to the next handler
   }
 
+  const ogImage = event.image;
   const html = `
     <!DOCTYPE html>
     <html>
       <head>
-        <title>${event.name}</title>
-        <meta name="description" content="${event.description}" />
-        <meta property="og:title" content="${event.name}" />
-        <meta property="og:description" content="${event.description}" />
-        <meta property="og:image" content="${event.image}" />
+        <title>${escapeHtml(event.name)}</title>
+        <meta name="description" content="${escapeHtml(event.description)}" />
+        <meta property="og:title" content="${escapeHtml(event.name)}" />
+        <meta property="og:description" content="${escapeHtml(event.description)}" />
+        <meta property="og:image" content="${escapeHtml(ogImage)}" />
         <meta property="og:url" content="${request.url}" />
         <meta property="og:type" content="event" />
       </head>

@@ -1,5 +1,3 @@
-import { NextResponse } from "next/server";
-
 const BACKEND_BASE_URL = "https://api.tikko-backend.com.br";
 
 interface Event {
@@ -48,54 +46,48 @@ function escapeHtml(unsafe: string): string {
 }
 
 export default async function middleware(request: Request) {
-  const userAgent = request.headers.get("user-agent") || "";
-  const isBot =
-    userAgent.includes("WhatsApp") || userAgent.includes("facebookexternalhit");
-
-  if (!isBot) {
-    return NextResponse.next(); // Pass request to the next handler (application)
-  }
-
-  const url = new URL(request.url);
-  const pathname = url.pathname;
-
-  // Only handle /event/:eventId routes
-  const match = pathname.match(/^\/event\/(\d+)$/);
-  if (!match) {
-    return NextResponse.next(); // Pass request to the next handler
-  }
-
-  const eventId = Number(match[1]);
-  if (isNaN(eventId)) {
-    return NextResponse.next(); // Pass request to the next handler
-  }
-
-  const event = await getEvent(eventId);
-  if (!event) {
-    return NextResponse.next(); // Pass request to the next handler
-  }
-
-  const ogImage = event.image;
-  const html = `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>${escapeHtml(event.name)}</title>
-        <meta name="description" content="${escapeHtml(event.description)}" />
-        <meta property="og:title" content="${escapeHtml(event.name)}" />
-        <meta property="og:description" content="${escapeHtml(event.description)}" />
-        <meta property="og:image" content="${escapeHtml(ogImage)}" />
-        <meta property="og:url" content="${request.url}" />
-        <meta property="og:type" content="event" />
-      </head>
-      <body></body>
-    </html>
-  `;
-
-  return new Response(html, {
-    status: 200,
-    headers: { "Content-Type": "text/html" },
-  });
+  // const userAgent = request.headers.get("user-agent") || "";
+  // const isBot =
+  //   userAgent.includes("WhatsApp") || userAgent.includes("facebookexternalhit");
+  // if (!isBot) {
+  //   return; // Pass request to the next handler (application)
+  // }
+  // const url = new URL(request.url);
+  // const pathname = url.pathname;
+  // // Only handle /event/:eventId routes
+  // const match = pathname.match(/^\/event\/(\d+)$/);
+  // if (!match) {
+  //   return; // Pass request to the next handler
+  // }
+  // const eventId = Number(match[1]);
+  // if (isNaN(eventId)) {
+  //   return; // Pass request to the next handler
+  // }
+  // const event = await getEvent(eventId);
+  // if (!event) {
+  //   return; // Pass request to the next handler
+  // }
+  // const ogImage = event.image;
+  // const html = `
+  //   <!DOCTYPE html>
+  //   <html>
+  //     <head>
+  //       <title>${escapeHtml(event.name)}</title>
+  //       <meta name="description" content="${escapeHtml(event.description)}" />
+  //       <meta property="og:title" content="${escapeHtml(event.name)}" />
+  //       <meta property="og:description" content="${escapeHtml(event.description)}" />
+  //       <meta property="og:image" content="${escapeHtml(ogImage)}" />
+  //       <meta property="og:url" content="${request.url}" />
+  //       <meta property="og:type" content="event" />
+  //     </head>
+  //     <body></body>
+  //   </html>
+  // `;
+  // return new Response(html, {
+  //   status: 200,
+  //   headers: { "Content-Type": "text/html" },
+  // });
+  return new Response("Other pages work normally");
 }
 
 export const config = {
